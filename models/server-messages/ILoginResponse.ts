@@ -16,6 +16,7 @@ export interface ILoginResponse {
   PrivateCharacter: object[];
   FriendList: number[];
   WhiteList: number[];
+  Wardrobe: string;
   WardrobeCharacterNames: string[];
   Ownership: IOwnership;
   Title: string;

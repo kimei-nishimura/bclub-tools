@@ -26,6 +26,7 @@ import {
 } from '../../../models';
 import { notifyAccountBeep, notifyFriendChange, notifyIncomingMessage } from './notifications';
 import { writeMember, writeFriends, removeChatRoomData, retrieveMember } from './member';
+import { writeWardrobe } from './wardrobe';
 
 chrome.browserAction.onClicked.addListener(() => {
   chrome.tabs.create({
@@ -206,6 +207,7 @@ function handleLoginResponse(tabId: number, message: IServerMessage<IPlayerWithR
   });
 
   writeFriends(message.data);
+  writeWardrobe(tabId, message.data.WardrobeCharacterNames, message.data.EncodedWardrobe);
 }
 
 async function handleCommonDrawAppearanceBuild(tabId: number, message: IClientMessage<any>) {

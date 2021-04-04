@@ -118,7 +118,9 @@ export function listenToServerEvents(handshake: string) {
     Name: data.Name,
     FriendList: data.FriendList,
     Lovership: data.Lovership,
-    Ownership: data.Ownership
+    Ownership: data.Ownership,
+    EncodedWardrobe: data.Wardrobe,
+    WardrobeCharacterNames: data.WardrobeCharacterNames,
   }));
   createForwarder('disconnect');
   createForwarder('ForceDisconnect');

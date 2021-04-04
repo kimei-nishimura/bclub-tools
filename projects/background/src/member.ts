@@ -7,7 +7,7 @@ import {
   MemberType,
   MemberTypeOrder,
   IPlayerWithRelations,
-  decompress,
+  decompressProfile,
 } from '../../../models';
 
 interface PlayerContext {
@@ -61,7 +61,7 @@ function mapChatRoomCharacter(data: IChatRoomCharacter) {
     dominant: data.Reputation && data.Reputation.find(r => r.Type === 'Dominant')
       ? data.Reputation.find(r => r.Type === 'Dominant').Value
       : 0,
-    description: decompress(data.Description),
+    description: decompressProfile(data.Description),
     labelColor: data.LabelColor,
     lovership: data.Lovership ? data.Lovership.map(lover => ({
       memberNumber: lover.MemberNumber,

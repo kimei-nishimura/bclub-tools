@@ -4,7 +4,7 @@ import { ActivatedRoute } from '@angular/router';
 import { MatSnackBar } from '@angular/material';
 import { debounceTime, tap, map, switchMap, mergeMap } from 'rxjs/operators';
 import { Subscription, Observable } from 'rxjs';
-import { IMember, addOrUpdateObjectStore, decompress } from 'models';
+import { IMember, addOrUpdateObjectStore, decompressProfile } from 'models';
 import { MemberService } from 'src/app/shared/member.service';
 import { NgStyle } from '@angular/common';
 
@@ -27,7 +27,7 @@ export class MemberInfoComponent implements OnDestroy {
     notes: new FormControl('')
   });
 
-  public decompress = decompress;
+  public decompress = decompressProfile;
 
   constructor(
     route: ActivatedRoute,

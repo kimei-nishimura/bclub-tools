@@ -10,4 +10,6 @@ export interface IPlayerWithRelations extends IStoredPlayer {
   FriendList: number[];
   Lovership: ILovership[];
   Ownership?: IOwnership;
+  EncodedWardrobe: string;
+  WardrobeCharacterNames: string[];
 }

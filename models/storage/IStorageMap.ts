@@ -1,5 +1,6 @@
 import { IChatRoomCharacter, IChatRoomSearchResult, IStoredPlayer, ISettings, IMigration } from 'models';
 import { IMember } from 'models/database';
+import { IStoredAppearance } from 'models/internal';
 
 export const GLOBAL_STORAGE_KEYS = [
   'migration',
@@ -10,7 +11,8 @@ export const STORAGE_KEYS = [
   'chatRoomCharacter',
   'chatRoomSearchResult',
   'onlineFriends',
-  'player'
+  'player',
+  'wardrobe'
 ] as const;
 
 export type GlobalStorageKeys = typeof GLOBAL_STORAGE_KEYS[number];
@@ -26,4 +28,5 @@ export interface IStorageMap {
   'chatRoomSearchResult': IChatRoomSearchResult[];
   'onlineFriends': IMember[];
   'player': IStoredPlayer;
+  'wardrobe': IStoredAppearance[];
 }
