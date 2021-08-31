@@ -33,6 +33,18 @@
     }
   ],
   "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+  "externally_connectable": {
+    "matches": [
+      "http://bondageprojects.com/*",
+      "https://bondageprojects.com/*",
+      "http://www.bondageprojects.com/*",
+      "https://www.bondageprojects.com/*",
+      "http://bondageprojects.elementfx.com/*",
+      "https://bondageprojects.elementfx.com/*",
+      "http://www.bondageprojects.elementfx.com/*",
+      "https://www.bondageprojects.elementfx.com/*"
+    ]
+  },
   "permissions": [
     "activeTab",
     "notifications",
@@ -47,5 +59,6 @@
     "http://www.bondageprojects.elementfx.com/*",
     "https://www.bondageprojects.elementfx.com/*"
   ],
-  "options_page": "index.html?page=/options"
+  "options_page": "index.html?page=/options",
+  "web_accessible_resources": ["injectable-script/main.js"]
 }
